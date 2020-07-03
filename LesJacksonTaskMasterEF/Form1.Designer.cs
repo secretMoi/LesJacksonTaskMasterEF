@@ -30,16 +30,16 @@
 		{
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.textBoxTask = new System.Windows.Forms.TextBox();
-			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-			this.comboBoxStatus = new System.Windows.Forms.ComboBox();
-			this.buttonCreate = new System.Windows.Forms.Button();
-			this.buttonUpdate = new System.Windows.Forms.Button();
-			this.buttonDelete = new System.Windows.Forms.Button();
-			this.buttonCancel = new System.Windows.Forms.Button();
-			this.labelTask = new System.Windows.Forms.Label();
-			this.labelStatus = new System.Windows.Forms.Label();
 			this.labelDueDate = new System.Windows.Forms.Label();
+			this.labelStatus = new System.Windows.Forms.Label();
+			this.labelTask = new System.Windows.Forms.Label();
+			this.buttonCancel = new System.Windows.Forms.Button();
+			this.buttonDelete = new System.Windows.Forms.Button();
+			this.buttonUpdate = new System.Windows.Forms.Button();
+			this.buttonCreate = new System.Windows.Forms.Button();
+			this.comboBoxStatus = new System.Windows.Forms.ComboBox();
+			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+			this.textBoxTask = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
@@ -77,74 +77,14 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Task";
 			// 
-			// textBoxTask
+			// labelDueDate
 			// 
-			this.textBoxTask.Location = new System.Drawing.Point(71, 19);
-			this.textBoxTask.Name = "textBoxTask";
-			this.textBoxTask.Size = new System.Drawing.Size(174, 20);
-			this.textBoxTask.TabIndex = 0;
-			// 
-			// dateTimePicker1
-			// 
-			this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.dateTimePicker1.Location = new System.Drawing.Point(459, 19);
-			this.dateTimePicker1.Name = "dateTimePicker1";
-			this.dateTimePicker1.Size = new System.Drawing.Size(111, 20);
-			this.dateTimePicker1.TabIndex = 1;
-			// 
-			// comboBoxStatus
-			// 
-			this.comboBoxStatus.FormattingEnabled = true;
-			this.comboBoxStatus.Location = new System.Drawing.Point(71, 45);
-			this.comboBoxStatus.Name = "comboBoxStatus";
-			this.comboBoxStatus.Size = new System.Drawing.Size(121, 21);
-			this.comboBoxStatus.TabIndex = 2;
-			this.comboBoxStatus.Text = "Please Select...";
-			// 
-			// buttonCreate
-			// 
-			this.buttonCreate.Location = new System.Drawing.Point(198, 43);
-			this.buttonCreate.Name = "buttonCreate";
-			this.buttonCreate.Size = new System.Drawing.Size(75, 23);
-			this.buttonCreate.TabIndex = 3;
-			this.buttonCreate.Text = "Create";
-			this.buttonCreate.UseVisualStyleBackColor = true;
-			// 
-			// buttonUpdate
-			// 
-			this.buttonUpdate.Location = new System.Drawing.Point(279, 43);
-			this.buttonUpdate.Name = "buttonUpdate";
-			this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
-			this.buttonUpdate.TabIndex = 4;
-			this.buttonUpdate.Text = "Update";
-			this.buttonUpdate.UseVisualStyleBackColor = true;
-			// 
-			// buttonDelete
-			// 
-			this.buttonDelete.Location = new System.Drawing.Point(360, 43);
-			this.buttonDelete.Name = "buttonDelete";
-			this.buttonDelete.Size = new System.Drawing.Size(75, 23);
-			this.buttonDelete.TabIndex = 5;
-			this.buttonDelete.Text = "Delete";
-			this.buttonDelete.UseVisualStyleBackColor = true;
-			// 
-			// buttonCancel
-			// 
-			this.buttonCancel.Location = new System.Drawing.Point(279, 72);
-			this.buttonCancel.Name = "buttonCancel";
-			this.buttonCancel.Size = new System.Drawing.Size(75, 23);
-			this.buttonCancel.TabIndex = 6;
-			this.buttonCancel.Text = "Cancel";
-			this.buttonCancel.UseVisualStyleBackColor = true;
-			// 
-			// labelTask
-			// 
-			this.labelTask.AutoSize = true;
-			this.labelTask.Location = new System.Drawing.Point(6, 25);
-			this.labelTask.Name = "labelTask";
-			this.labelTask.Size = new System.Drawing.Size(34, 13);
-			this.labelTask.TabIndex = 7;
-			this.labelTask.Text = "Task:";
+			this.labelDueDate.AutoSize = true;
+			this.labelDueDate.Location = new System.Drawing.Point(397, 22);
+			this.labelDueDate.Name = "labelDueDate";
+			this.labelDueDate.Size = new System.Drawing.Size(56, 13);
+			this.labelDueDate.TabIndex = 9;
+			this.labelDueDate.Text = "Due Date:";
 			// 
 			// labelStatus
 			// 
@@ -155,14 +95,78 @@
 			this.labelStatus.TabIndex = 8;
 			this.labelStatus.Text = "Status:";
 			// 
-			// labelDueDate
+			// labelTask
 			// 
-			this.labelDueDate.AutoSize = true;
-			this.labelDueDate.Location = new System.Drawing.Point(397, 22);
-			this.labelDueDate.Name = "labelDueDate";
-			this.labelDueDate.Size = new System.Drawing.Size(56, 13);
-			this.labelDueDate.TabIndex = 9;
-			this.labelDueDate.Text = "Due Date:";
+			this.labelTask.AutoSize = true;
+			this.labelTask.Location = new System.Drawing.Point(6, 25);
+			this.labelTask.Name = "labelTask";
+			this.labelTask.Size = new System.Drawing.Size(34, 13);
+			this.labelTask.TabIndex = 7;
+			this.labelTask.Text = "Task:";
+			// 
+			// buttonCancel
+			// 
+			this.buttonCancel.Location = new System.Drawing.Point(279, 72);
+			this.buttonCancel.Name = "buttonCancel";
+			this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+			this.buttonCancel.TabIndex = 6;
+			this.buttonCancel.Text = "Cancel";
+			this.buttonCancel.UseVisualStyleBackColor = true;
+			this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+			// 
+			// buttonDelete
+			// 
+			this.buttonDelete.Location = new System.Drawing.Point(360, 43);
+			this.buttonDelete.Name = "buttonDelete";
+			this.buttonDelete.Size = new System.Drawing.Size(75, 23);
+			this.buttonDelete.TabIndex = 5;
+			this.buttonDelete.Text = "Delete";
+			this.buttonDelete.UseVisualStyleBackColor = true;
+			this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+			// 
+			// buttonUpdate
+			// 
+			this.buttonUpdate.Location = new System.Drawing.Point(279, 43);
+			this.buttonUpdate.Name = "buttonUpdate";
+			this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
+			this.buttonUpdate.TabIndex = 4;
+			this.buttonUpdate.Text = "Update";
+			this.buttonUpdate.UseVisualStyleBackColor = true;
+			this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
+			// 
+			// buttonCreate
+			// 
+			this.buttonCreate.Location = new System.Drawing.Point(198, 43);
+			this.buttonCreate.Name = "buttonCreate";
+			this.buttonCreate.Size = new System.Drawing.Size(75, 23);
+			this.buttonCreate.TabIndex = 3;
+			this.buttonCreate.Text = "Create";
+			this.buttonCreate.UseVisualStyleBackColor = true;
+			this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
+			// 
+			// comboBoxStatus
+			// 
+			this.comboBoxStatus.FormattingEnabled = true;
+			this.comboBoxStatus.Location = new System.Drawing.Point(71, 45);
+			this.comboBoxStatus.Name = "comboBoxStatus";
+			this.comboBoxStatus.Size = new System.Drawing.Size(121, 21);
+			this.comboBoxStatus.TabIndex = 2;
+			this.comboBoxStatus.Text = "Please Select...";
+			// 
+			// dateTimePicker1
+			// 
+			this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+			this.dateTimePicker1.Location = new System.Drawing.Point(459, 19);
+			this.dateTimePicker1.Name = "dateTimePicker1";
+			this.dateTimePicker1.Size = new System.Drawing.Size(111, 20);
+			this.dateTimePicker1.TabIndex = 1;
+			// 
+			// textBoxTask
+			// 
+			this.textBoxTask.Location = new System.Drawing.Point(71, 19);
+			this.textBoxTask.Name = "textBoxTask";
+			this.textBoxTask.Size = new System.Drawing.Size(174, 20);
+			this.textBoxTask.TabIndex = 0;
 			// 
 			// Form1
 			// 
